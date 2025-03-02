@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI浪潮下，阿笨老师带你重塑编程竞争力</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+            margin-bottom: 40px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .main-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .section {
+            flex: 1;
+            min-width: 300px;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .section-header {
+            padding: 20px;
+            background: linear-gradient(135deg, #e53935 0%, #ff5252 100%);
+            color: white;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title span {
+            margin-left: 5px;
+        }
+        
+        .section-content {
+            padding: 25px;
+            font-size: 16px;
+            color: #555;
+        }
+        
+        .highlight-text {
+            background-color: rgba(229, 57, 53, 0.08);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #e53935;
+        }
+        
+        .feature-list {
+            margin: 15px 0;
+            list-style-type: none;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #eee;
+        }
+        
+        .feature-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .feature-icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #e53935 0%, #ff5252 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .feature-content {
+            flex: 1;
+        }
+        
+        .feature-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .feature-description {
+            color: #666;
+        }
+        
+        /* 会员价格卡片风格 */
+        .pricing-section {
+            padding: 50px 0;
+            text-align: center;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+        
+        .pricing-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .pricing-subtitle {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .pricing-cards {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .pricing-card {
+            flex: 1;
+            max-width: 380px;
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .standard-card {
+            background: linear-gradient(180deg, #ffffff 0%, #fff7f7 100%);
+        }
+        
+        .premium-card {
+            background: linear-gradient(180deg, #ffffff 0%, #fff0f0 100%);
+        }
+        
+        .card-tag {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: #ff3d00;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+        
+        .card-header {
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .card-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .standard-card .card-title {
+            color: #e53935;
+        }
+        
+        .premium-card .card-title {
+            color: #c62828;
+        }
+        
+        .card-price {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 20px 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .standard-card .card-price {
+            color: #e53935;
+        }
+        
+        .premium-card .card-price {
+            color: #c62828;
+        }
+        
+        .price-currency {
+            font-size: 20px;
+            margin-right: 5px;
+            align-self: flex-start;
+            margin-top: 10px;
+        }
+        
+        .card-description {
+            font-size: 14px;
+            color: #777;
+        }
+        
+        .card-features {
+            padding: 30px;
+        }
+        
+        .card-feature {
+            display: flex;
+            align-items: flex-start;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        
+        .card-feature-icon {
+            min-width: 24px;
+            margin-right: 15px;
+        }
+        
+        .standard-card .card-feature-icon {
+            color: #e53935;
+        }
+        
+        .premium-card .card-feature-icon {
+            color: #c62828;
+        }
+        
+        .card-feature-text {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.5;
+        }
+        
+        .card-button {
+            display: block;
+            margin: 10px 30px 30px;
+            padding: 14px 0;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .standard-card .card-button {
+            background: #e53935;
+            color: white;
+            box-shadow: 0 5px 15px rgba(229, 57, 53, 0.3);
+        }
+        
+        .standard-card .card-button:hover {
+            background: #d32f2f;
+            box-shadow: 0 8px 25px rgba(229, 57, 53, 0.4);
+        }
+        
+        .premium-card .card-button {
+            background: #c62828;
+            color: white;
+            box-shadow: 0 5px 15px rgba(198, 40, 40, 0.3);
+        }
+        
+        .premium-card .card-button:hover {
+            background: #b71c1c;
+            box-shadow: 0 8px 25px rgba(198, 40, 40, 0.4);
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding: 60px 30px;
+            background: linear-gradient(135deg, #e53935 0%, #ff5252 100%);
+            color: white;
+            border-radius: 12px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(229, 57, 53, 0.2);
+        }
+        
+        .cta-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-description {
+            font-size: 16px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background-color: white;
+            color: #e53935;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .contact-section {
+            text-align: center;
+            padding: 50px 30px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+        
+        .contact-title {
+            font-size: 22px;
+            color: #e53935;
+            margin-bottom: 15px;
+        }
+        
+        .contact-subtitle {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .qrcode-container {
+            max-width: 250px;
+            margin: 0 auto;
+            padding: 15px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid #eee;
+        }
+        
+        .qrcode-img {
+            width: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            .pricing-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .pricing-card {
+                width: 100%;
+            }
+            
+            .content-section {
+                flex-direction: column;
+            }
+            
+            .section {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">AI 浪潮下，阿笨老师带你重塑编程竞争力！</h1>
+            <p class="subtitle">解锁全部学习资源，加速您的专业成长</p>
+        </div>
+        
+        <div class="content-section">
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span>一、告别过时培训，拥抱AI编程未来</span>
+                    </h2>
+                </div>
+                <div class="section-content">
+                    <p>在AI的浪潮中，编程不再是单纯的代码堆砌，而是如何利用AI工具为你服务，提升效率、优化产出。阿笨老师，作为资深.NET开发专家，凭借多年的实战经验，将带领你进入AI编程的全新世界。</p>
+                    <p class="highlight-text">相比那些只停留在理论上的培训班，阿笨老师的课程切实贴合行业前沿，教你如何通过AI技术快速提升开发效率，驾驭AI，让它为你服务，助你在技术的浪潮中脱颖而出。</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span>二、阿笨老师—AI编程领域的领军人物</span>
+                    </h2>
+                </div>
+                <div class="section-content">
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <div class="feature-icon">•</div>
+                            <div class="feature-content">
+                                <div class="feature-title">深厚技术背景</div>
+                                <div class="feature-description">活跃在一线开发领域，紧跟最新技术潮流，尤其在AI编程方面的实践经验，帮助你在AI时代迅速掌握核心技能。</div>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">•</div>
+                            <div class="feature-content">
+                                <div class="feature-title">课程内容</div>
+                                <div class="feature-description">从零基础到高级实战，覆盖AI编程的各个方面。课程紧扣行业实际需求，直接解决你在工作中的技术难题，帮助你提高开发效率、减少重复工作，轻松完成复杂功能。</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section" style="margin-bottom: 40px;">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span>三、课程亮点</span>
+                </h2>
+            </div>
+            <div class="section-content">
+                <ul class="feature-list">
+                    <li class="feature-item">
+                        <div class="feature-icon">•</div>
+                        <div class="feature-content">
+                            <div class="feature-title">AI编程实战</div>
+                            <div class="feature-description">通过实际项目案例，带你一步步掌握如何让AI助力开发，提升工作效率。</div>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-icon">•</div>
+                        <div class="feature-content">
+                            <div class="feature-title">智能提示词技巧</div>
+                            <div class="feature-description">让AI成为你的开发好伙伴，帮你解决工作中的各种问题，提升编程速度。</div>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-icon">•</div>
+                        <div class="feature-content">
+                            <div class="feature-title">立即应用</div>
+                            <div class="feature-description">学完课程，你将能迅速应用到工作中，提升工作产值，真正驾驭AI。</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="pricing-section">
+            <h2 class="pricing-title">选择最适合您的会员方案</h2>
+            <p class="pricing-subtitle">解锁全部学习资源，加速您的专业成长</p>
+            
+            <div class="pricing-cards">
+                <!-- 标准会员卡片 -->
+                <div class="pricing-card standard-card">
+                    <div class="card-header">
+                        <h3 class="card-title">标准会员</h3>
+                        <div class="card-price">
+                            <span class="price-currency">¥</span>
+                            1999
+                        </div>
+                        <p class="card-description">开启您的学习之旅</p>
+                    </div>
+                    <div class="card-features">
+                        <div class="card-feature">
+                            <div class="card-feature-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                            </div>
+                            <div class="card-feature-text">全量课程：畅享平台所有课程，最新课程和过往课程可终身免费学习。</div>
+                        </div>
+                        <div class="card-feature">
+                            <div class="card-feature-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                            </div>
+                            <div class="card-feature-text">VIP群指导：加入专属VIP群，享受针对性的问题解答和学习支持。</div>
+                        </div>
+                    </div>
+                    <a href="#" class="card-button">立即加入</a>
+                </div>
+                
+                <!-- 高级会员卡片 -->
+                <div class="pricing-card premium-card">
+                    <div class="card-tag">热门选择</div>
+                    <div class="card-header">
+                        <h3 class="card-title">高级会员</h3>
+                        <div class="card-price">
+                            <span class="price-currency">¥</span>
+                            3999
+                        </div>
+                        <p class="card-description">专业进阶首选方案</p>
+                    </div>
+                    <div class="card-features">
+                        <div class="card-feature">
+                            <div class="card-feature-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                            </div>
+                            <div class="card-feature-text">全方位学习支持：享受标准会员所有权益，并提供专属一对一辅导，提升开发效率。</div>
+                        </div>
+                        <div class="card-feature">
+                            <div class="card-feature-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                            </div>
+                            <div class="card-feature-text">模拟面试服务：提升面试表现，优化简历，让你在求职中脱颖而出。</div>
+                        </div>
+                        <div class="card-feature">
+                            <div class="card-feature-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                            </div>
+                            <div class="card-feature-text">AI编程进阶：深入掌握AI编程技巧，在专业领域实现技术突破。</div>
+                        </div>
+                    </div>
+                    <a href="#" class="card-button">立即升级</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span>五、为什么选择阿笨老师的课程？</span>
+                    </h2>
+                </div>
+                <div class="section-content">
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <div class="feature-icon">•</div>
+                            <div class="feature-content">
+                                <div class="feature-title">专业+实战</div>
+                                <div class="feature-description">不只讲理论，注重真实开发场景中的应用，让你立即上手。</div>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">•</div>
+                            <div class="feature-content">
+                                <div class="feature-title">领先一步</div>
+                                <div class="feature-description">学会如何让AI为你赋能，走在行业前沿，快速提高市场竞争力。</div>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">•</div>
+                            <div class="feature-content">
+                                <div class="feature-title">值得的投资</div>
+                                <div class="feature-description">不仅仅是学编程，更是让AI成为你职场竞争力的重要武器。</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <h2 class="cta-title">现在就行动，开启AI编程之旅！</h2>
+            <p class="cta-description">加入阿笨老师的AI编程课程，立刻提升你的开发技能，成为未来AI编程的领航者！立刻私信报名，让AI编程助力你的职业发展！</p>
+            <a href="#" class="cta-button">立即报名</a>
+        </div>
+        
+        <div class="contact-section">
+            <h2 class="contact-title">扫码咨询VIP详细</h2>
+            <p class="contact-subtitle">立即报名，享受优惠</p>
+            <div class="qrcode-container">
+                <img src="/logo/qrCode.png" alt="扫码咨询" class="qrcode-img">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
