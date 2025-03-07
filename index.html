@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿笨AI.NET编程 - 成为效能卓越的开发者</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: linear-gradient(135deg, #7928CA, #FF0080);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(121, 40, 202, 0.3);
+        }
+        h1 {
+            font-size: 42px;
+            margin: 0;
+            padding-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .subtitle {
+            font-size: 22px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            padding: 30px;
+            transition: all 0.3s ease;
+            text-align: center;
+            border-bottom: 4px solid transparent;
+        }
+        .card:nth-child(1) {
+            border-bottom-color: #4FC0E8;
+        }
+        .card:nth-child(2) {
+            border-bottom-color: #FFCE54;
+        }
+        .card:nth-child(3) {
+            border-bottom-color: #A0D568;
+        }
+        .card:nth-child(4) {
+            border-bottom-color: #FC6E51;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        .card-title {
+            color: #7928CA;
+            font-size: 22px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .testimonial {
+            background: #FFF1F9;
+            border-left: 4px solid #FF0080;
+            padding: 25px;
+            margin-bottom: 25px;
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 5px 15px rgba(255, 0, 128, 0.1);
+        }
+        .cta-button {
+            background: linear-gradient(to right, #7928CA, #FF0080);
+            color: white;
+            padding: 18px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(121, 40, 202, 0.4);
+            font-size: 18px;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(121, 40, 202, 0.5);
+        }
+        .faq-item {
+            margin-bottom: 30px;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #7928CA;
+            font-size: 18px;
+        }
+        .faq-answer {
+            line-height: 1.6;
+        }
+        section {
+            margin-bottom: 60px;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+            color: #666;
+            background: linear-gradient(to right, rgba(121, 40, 202, 0.05), rgba(255, 0, 128, 0.05));
+            border-radius: 12px;
+        }
+        .icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+        }
+        .center-text {
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+            color: #444;
+            margin-bottom: 30px;
+            font-size: 32px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        h2:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 4px;
+            background: linear-gradient(to right, #7928CA, #FF0080);
+            border-radius: 2px;
+        }
+        .section-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>阿笨AI.NET编程课程</h1>
+            <div class="subtitle">将AI转化为真正生产力工具，成为效能卓越的超级开发者</div>
+        </header>
+
+        <section>
+            <h2>为什么要学习AI.NET编程？</h2>
+            <div class="section-intro">
+                <p>掌握AI不仅仅是会使用，而是成为能将AI转化为真正生产力工具的高级玩家。</p>
+                <p>不要落后于技术潮流，立即掌握AI驱动的.NET开发技能，成为团队中不可替代的开发者。</p>
+            </div>
+        </section>
+
+        <section class="grid">
+            <div class="card">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="#4FC0E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="rgba(79, 192, 232, 0.2)"/>
+                </svg>
+                <h3 class="card-title">提升开发效率</h3>
+                <p>利用AI助手将日常开发任务效率提升，从重复性工作中解放出来，将AI与自己的工作相结合，才能真正释放生产力。</p>
+            </div>
+            <div class="card">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="3" width="18" height="18" rx="2" stroke="#FFCE54" stroke-width="2" fill="rgba(255, 206, 84, 0.2)"/>
+                    <path d="M7 9L10 12L7 15" stroke="#FFCE54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 17H17" stroke="#FFCE54" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <h3 class="card-title">实战应用</h3>
+                <p>不只是理论，看看AI如何解决实际.NET开发中的业务需求，改变你的整个开发思维模式。</p>
+            </div>
+            <div class="card">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 6L7 12H17L12 18" stroke="#A0D568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="rgba(160, 213, 104, 0.2)"/>
+                    <circle cx="12" cy="12" r="9" stroke="#A0D568" stroke-width="2"/>
+                </svg>
+                <h3 class="card-title">获得竞争优势</h3>
+                <p>以更高的视角思考问题，将更多精力放在创新和架构上，而不是被繁琐的编码细节消耗。</p>
+            </div>
+            <div class="card">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 3H8C6.34315 3 5 4.34315 5 6V18C5 19.6569 6.34315 21 8 21H16C17.6569 21 19 19.6569 19 18V6C19 4.34315 17.6569 3 16 3Z" stroke="#FC6E51" stroke-width="2" fill="rgba(252, 110, 81, 0.2)"/>
+                    <path d="M12 8V16M8 12H16" stroke="#FC6E51" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <h3 class="card-title">升职加薪</h3>
+                <p>掌握AI开发技能让你成为团队中的技术领导者，提升个人价值和薪资水平，为职业发展开辟新道路。</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>开发者的真实体验</h2>
+            <div class="testimonial">
+                "以前处理遗留代码可能需要几天时间，现在我只需将代码片段发给AI，几分钟内就能理解核心逻辑并得到重构建议。我的工作效率至少提高了300%。"
+            </div>
+            <div class="testimonial">
+                "团队中引入AI辅助开发后，我们项目的交付速度提升了40%，代码质量问题减少了60%。现在每个团队成员都将AI视为他们的私人助教和配对编程伙伴。"
+            </div>
+            <div class="testimonial">
+                "作为一名需要同时处理前后端工作的开发者，AI帮我弥补了知识盲点。特别是在前端领域，它能快速生成前端组件代码并与我的.NET后端无缝集成，让我能单枪匹马完成全栈任务。"
+            </div>
+        </section>
+
+        <section>
+            <h2>常见问题</h2>
+            <div class="faq-item">
+                <div class="faq-question">我需要有AI或机器学习背景才能学习吗？</div>
+                <div class="faq-answer">完全不需要！我们的课程专为.NET开发者设计，不要求任何AI或机器学习背景。你只需要具备基本的C#和.NET开发经验，我们会教你如何有效地使用AI工具来提升你的开发效率。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">学习AI编程会取代我的开发工作吗？</div>
+                <div class="faq-answer">恰恰相反！掌握AI辅助开发技能会让你成为更有价值的开发者。AI是工具，而不是替代品。熟练使用AI的开发者将比不使用AI的开发者更有竞争力，能够更快地解决问题和创造价值。我们的目标是教你如何利用AI成为效能卓越的超级开发者。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">课程内容会随着AI技术发展更新吗？</div>
+                <div class="faq-answer">绝对会！我们承诺定期更新课程内容，跟进最新AI模型和工具的发展。作为学员，你将终身获得课程更新和社区资源，确保你的AI开发技能始终保持在行业前沿。</div>
+            </div>
+        </section>
+
+        <div class="center-text">
+            <h2>准备好提升您的开发效率了吗？</h2>
+            <a href="#" class="cta-button">立即开始学习</a>
+        </div>
+
+        <footer>
+            <p>© 2025 阿笨AI.NET编程课程. 所有权利保留.</p>
+        </footer>
+    </div>
+</body>
+</html>
